@@ -39,17 +39,17 @@ STEP:7 compare the output with truth table.
     wire d;
     D_FF dff0(q, d, clk, reset);
     not n1(d, q);
-```endmodule
-module D_FF(q, d, clk, reset);
-output q;
-input d, clk, reset;
-reg q;
-always @(posedge reset or negedge clk)
-if (reset)
-q = 1'b0;
-else
-q = d;
-endmodule```
+    endmodule
+    module D_FF(q, d, clk, reset);
+    output q;
+    input d, clk, reset;
+    reg q;
+    always @(posedge reset or negedge clk)
+    if (reset)
+    q = 1'b0;
+    else
+    q = d;
+    endmodule
 
 # Output
 ![image](https://github.com/trishasailendran/8BIT_SYNCHRONOUS_UP-DOWN_COUNTER/assets/87655678/ffd75f6f-e811-4f25-a519-270954a27e57)
